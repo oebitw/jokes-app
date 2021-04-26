@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Random</title>
+    <%- include('../layout/head') %> 
+
+</head>
+<body>
+
+    <header>
+
+        <%- include('../layout/header') %> 
+
+
+    </header>
+    <main>
+
+        <div class="container">
+
+            <h3> Joke Number:<%= data.id %> </h3>
+            <h3> <%= data.type %> </h3>
+            <h3> <%= data.setup %> </h3>
+            <h3> <%= data.punchline %> </h3>
+
+        </div>
+
+    </main>
+
+    <footer>
+        <%- include('../layout/footer') %> 
+
+    </footer>
+    
+</body>
+</html>

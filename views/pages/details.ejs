@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Details</title>
+    <%- include('../layout/head') %> 
+
+</head>
+<body>
+
+    <header>
+
+        <%- include('../layout/header') %> 
+
+
+    </header> 
+
+
+    <main>
+
+        <div class="container">
+            <h3><%= data.id %> </h3>
+            <h3><%= data.type %> </h3>
+            <p><%= data.setup %> </p>
+            <p><%= data.punchline%></p>
+
+            <form action="/details/<%= data.id %>?_method=PUT" method="post">
+
+                <input name="type" value="<%= data.type %>"> <br>
+                <input name="setup" value="<%= data.setup %>"> <br>
+                <input name="punchline" value="<%= data.punchline %>"> <br>
+                <button type="submit">Update</button>
+            </form>
+
+            <form action="/details/<%= data.id %>?_method=DELETE" method="post">
+                <button type="submit">DELETE</button>
+            </form>
+        </div>
+
+    </main>
+
+    <footer>
+
+        <%- include('../layout/footer') %> 
+
+
+    </footer>
+    
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Fav Jokes</title>
+    <%- include('../layout/head') %> 
+
+</head>
+<body>
+
+    <header>
+
+        <%- include('../layout/header') %> 
+
+
+    </header>
+
+    <main>
+
+        <% if(count===0){ %> 
+
+            <h2>
+                The Fav list is Empty
+            </h2>
+
+        <% } %> 
+
+
+        <div class="wrap">
+            <% data.forEach(e=>{%>
+
+                <div class="container">
+                    <h3><%= e.type %> </h3>
+                    <p><%= e.setup %> </p>
+                    <p><%= e.punchline%></p>
+                    <button><a href="/details/<%= e.id %> "> View Details</a></button>
+
+                </div>
+
+
+            <%}) %> 
+        </div>
+
+    </main>
+
+    <footer>
+
+        <%- include('../layout/footer') %> 
+
+
+    </footer>
+    
+</body>
+</html>
